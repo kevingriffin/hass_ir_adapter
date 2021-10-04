@@ -33,14 +33,14 @@ jobs:
 
   nix-build-and-test-stable:
     docker:
-      - image: nixorg/nix:circleci
+      - image: nixos/nix:latest
     steps:
       - checkout
       - run: nix-build -I nixpkgs=channel:nixos-20.03
 
   nix-build-and-test-unstable:
     docker:
-      - image: nixorg/nix:circleci
+      - image: nixos/nix:latest
     steps:
       - checkout
       - run: nix-build -I nixpkgs=channel:nixos-unstable
