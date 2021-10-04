@@ -36,7 +36,7 @@ jobs:
       - image: nixos/nix:latest
     steps:
       - checkout
-      - run: nix-build -I nixpkgs=channel:nixos-20.03
+      - run: nix-build -I nixpkgs=channel:nixos-21.05
 
   nix-build-and-test-unstable:
     docker:
